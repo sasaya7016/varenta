@@ -5,7 +5,14 @@
   background-size: cover;
   position: relative;
   z-index: 0;
-  &__image {
-
+  &__line {
+    height: 480px;
+    width: 94%;
+    top: 10px;
+    left: 3%;
+    border: solid 4px black;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
   }
 }
