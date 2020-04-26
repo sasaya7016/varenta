@@ -1,0 +1,15 @@
+.main-header {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+
+  &__nav {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    h3 {
+      font-size: 20px;
+      line-height: 80px;
+    }
+  }
+}
