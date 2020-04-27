@@ -1,5 +1,49 @@
 .info {
-  height: 400px;
+  height: 600px;
   width: 100%;
-  background: gray;
+  background: white;
+  &__contents {
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    &__news {
+      height: 100%;
+      width: 50%;
+      background-color: white;
+      margin-right: 10px;
+      border: solid 1px black;
+      font-weight: normal;
+      &__title {
+        height: 50px;
+        width: 100%;
+        background-color: white;
+      }
+      &__list {
+        height: 200px;
+        width: 100%;
+        background-color: white;
+
+      }
+    }
+    &__schedule{
+      height: 100%;
+      width: 50%;
+      background-color:white;
+      border: solid 1px black;
+      font-weight: normal;
+      &__title {
+        height: 50px;
+        width: 100%;
+        background-color: white;
+      }
+      &__list {
+        height: 200px;
+        width: 100%;
+        background-color: white;
+      }
+    }
+  }
 }
