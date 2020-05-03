@@ -1,4 +1,6 @@
 .main {
+  top: 0;
+  left: 0;
   height: 500px;
   width: 100%;
   background: image-url("y.m1.jpg");
@@ -14,5 +16,13 @@
     font-weight: bold;
     position: absolute;
     z-index: 1;
+    &__logo {
+      margin: 100px 0 0 50px;
+      font-family: fantasy;
+      font-size: 100px;
+      color: white;
+      z-index: 2;
+    }
   }
+  
 }
