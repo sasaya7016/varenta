@@ -1,5 +1,5 @@
 .info {
-  height: 600px;
+  height: 430px;
   width: 100%;
   background: white;
   &__contents {
@@ -13,19 +13,26 @@
       height: 100%;
       width: 50%;
       background-color: white;
+      padding: 10px;
       margin-right: 10px;
       border: solid 1px black;
       font-weight: normal;
       &__title {
-        height: 50px;
+        height: 25px;
         width: 100%;
-        background-color: white;
+        background-color: #aaa;
       }
-      &__list {
-        height: 200px;
-        width: 100%;
-        background-color: white;
 
+      ul.info-list {
+        li.info-list-pickup  {
+          ul.pickup-news  {
+            border-bottom: 1px solid gray;
+            line-height: 50px;
+            display: flex;
+            li {   
+            }
+          }
+        } 
       }
     }
     &__schedule{
