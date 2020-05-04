@@ -2,13 +2,16 @@
   height: 60px;
   width: 100%;
   background-color: black;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
   &__nav {
-    color: white;
     display: flex;
     justify-content: space-evenly;
     h3 {
-      font-size: 13px;
+      font-size: 14px;
       line-height: 60px;
     }
   }
