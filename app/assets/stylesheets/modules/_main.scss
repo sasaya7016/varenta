@@ -17,7 +17,7 @@
       position: absolute;
       z-index: 2;
       left: 0;
-      background: image-url("y.m1.jpg");
+      background: image-url("main.logo2.jpg");
       background-size: cover;
     }
     &__right {
@@ -27,7 +27,7 @@
       position: absolute;
       z-index: 2;
       right: 0;
-      background: image-url("staff/staff.yoshikawa.jpg");
+      background: image-url("main.logo2.webp");
       background-size: cover;
     }
   }
@@ -44,5 +44,23 @@
 
 
 
+  }
+  &__title {
+    position: absolute;
+    z-index: 4;
+    top: 250px;
+    left: 160px;
+    h2 {
+      font-size: 45px;
+      font-weight: bold;
+      color: #eee;
+      -webkit-text-stroke: 2px #666;
+    }
+    p {
+      font-size: 30px;
+      font-weight: bold;
+      color: #eee;
+      -webkit-text-stroke: 2px #666;
+    }
   }
 }

@@ -2,8 +2,9 @@
   .info__contents
     .info__contents__news
       .info__contents__news__title
-        %h3 NEWS
-        -# %span air latest information
+        %h3 N E W S
+        %button 
+          = link_to "MORE" ,products_news_path
       %ul.info-list
         %li.info-list-pickup 
           = link_to products_news_path class:"pickup-news " do
@@ -44,7 +45,9 @@
 
     .info__contents__schedule
       .info__contents__schedule__title
-        %h3 schedule
+        %h3 S C H E D U L E S
+        %button 
+          = link_to "MORE" ,products_news_path
       %ul.info-list
         %li.info-list-pickup 
           = link_to products_staff_path class:"pickup-schedule" do
@@ -84,7 +87,16 @@
 
     .info__contents__point
       .info__contents__point__tab
-        %h3 schedule
+        %h3 A B O U T
+        .map-img
+          = image_tag("map-img.jpg",class:"map-img")
+        %ul.sns-btn
+          %li.sns-btn__set
+            =link_to image_tag("sns.png",class:"sns-logo"),root_path
+          %li.sns-btn__line
+            =link_to image_tag("line.png",class:"sns-logo"),root_path
+          %li.sns-btn__youtube
+            =link_to image_tag("youtube.png",class:"sns-logo"),root_path
 
 
     
