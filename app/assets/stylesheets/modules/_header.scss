@@ -34,10 +34,12 @@
     }
     
     button.form-btn {
+      width: 150px;
+      height: 40px;
+      font-size: 10px;
       position: absolute;
-      top: 10px;
+      top: 35px;
       right: 0px;
-      padding: 10px 50px;
       text-decoration: none;
       background: #333333;/*ボタン色*/
       color: #FFF;
@@ -45,18 +47,19 @@
       border-right: solid 2px #111111;
       content: none;/*ボタンを押すと線が消える*/
     }
-
-    .insta_btn {
-      display: inline-block;
-      text-align: center;/*中央揃え*/
-      color: #2e6ca5;/*文字色*/
-      font-size: 20px;/*文字サイズ*/
-      text-decoration: none;/*下線消す*/
-      :hover {
-        color:#668ad8;/*文字色*/
-        transition: .5s;/*ゆっくり変化*/
-      }
-
+    button.mypage-btn {
+      width: 150px;
+      height: 40px;
+      font-size: 10px;
+      position: absolute;
+      top: 80px;
+      right: 0px;
+      text-decoration: none;
+      background: #FF3333;/*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px#FF0033;
+      border-right: solid 2px #FF0000;
+      content: none;/*ボタンを押すと線が消える*/
     }
   }
 
@@ -76,11 +79,6 @@
         height: 100%;
         font-size: 13px;
         text-align: center;
-        // :hover {
-        //   width: 100%;
-        //   height: 100%;
-        //   background-color: red;
-        // }
         &__btn {
           h2 {
 

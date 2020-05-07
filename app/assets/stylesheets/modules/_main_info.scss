@@ -29,7 +29,10 @@
       &__title {
         height: 25px;
         width: 100%;
-        background-color: #aaa;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
       }
       ul.info-list {
         :hover {
@@ -39,7 +42,7 @@
           ul.pickup-news  {
             margin-top: 5px;
             border-bottom: 1px solid gray;
-            box-shadow: 0.1px 0.7px 1px 1px gray;
+            box-shadow: 0.1px 0.3px 0.3px 0.2px gray;
             line-height: 50px;
             display: flex;
             li.pickup-news__img {
@@ -80,7 +83,10 @@
       &__title {
         height: 25px;
         width: 100%;
-        background-color: #aaa;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
       }
       ul.info-list {
         :hover {
@@ -90,7 +96,7 @@
           ul.pickup-schedule  {
             margin-top: 5px;
             border-bottom: 1px solid gray;
-            box-shadow: 0.1px 0.7px 1px 1px gray;
+            box-shadow: 0.1px 0.3px 0.3px 0.2px gray;
             line-height: 50px;
             display: flex;
             li.pickup-schedule__img {
@@ -130,7 +136,42 @@
       &__tab {
         height: 100%;
         width: 100%;
-        background-color: #ddd;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        padding-left: 20px;
+        h3{
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        .map-img {
+          height: 100px;
+          width: 270px;
+          border: solid 1px #ccc;
+        }
+        ul.sns-btn {
+          display: flex;
+          .sns-btn__set img.sns-logo {
+            width: 130px;
+            height: 70px;
+            position: absolute;
+            top: 145px;
+            right: 190px;
+          }
+          .sns-btn__line img.sns-logo {
+            width: 55px;
+            height: 60px;
+            position: absolute;
+            top: 145px;
+            right: 45px;
+          }
+          .sns-btn__youtube img.sns-logo {
+            width: 95px;
+            height: 60px;
+            position: absolute;
+            top: 145px;
+            right: 90px;
+          }
+        }
       }
     }
   }
