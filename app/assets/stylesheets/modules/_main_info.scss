@@ -1,21 +1,30 @@
 .info {
-  height: 430px;
+  height: 230px;
   width: 100%;
-  background: white;
+  padding: 0 50px;
+  position: relative;
   &__contents {
     height: 100%;
-    width: 100%;
-    padding: 100px;
+    width: calc(100% - 100px);
+    min-width: 1000px;
+    border: solid 1px #ccc;
     background-color: white;
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 50px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
     &__news {
       height: 100%;
-      width: 50%;
+      width: 35%;
+      min-width: 350px;
       background-color: white;
       padding: 10px;
       margin-right: 10px;
-      border: solid 1px black;
+     
       font-weight: normal;
       &__title {
         height: 25px;
@@ -23,13 +32,34 @@
         background-color: #aaa;
       }
       ul.info-list {
+        :hover {
+          background-color: #eee;
+        }
         li.info-list-pickup  {
           ul.pickup-news  {
+            margin-top: 5px;
             border-bottom: 1px solid gray;
+            box-shadow: 0.1px 0.7px 1px 1px gray;
             line-height: 50px;
             display: flex;
+            li.pickup-news__img {
+              height: 44px;
+              width: 44px;
+              margin: 3px;
+              .post-logo {
+                height: 100%;
+                width: 100%;
+              }
+            }
+            li.pickup-news__new {
+              span {
+                background-color: red;
+                color: white;
+                padding: 1px;
+              }
+            }
             li {   
-              font-size: 13px;
+              font-size: 12px;
               margin-right: 10px;
               padding-left: 10px;
             }
@@ -41,11 +71,11 @@
 
     &__schedule{
       height: 100%;
-      width: 50%;
+      width: 35%;
+      min-width: 350px;
       background-color: white;
       padding: 10px;
       margin-right: 10px;
-      border: solid 1px black;
       font-weight: normal;
       &__title {
         height: 25px;
@@ -53,24 +83,54 @@
         background-color: #aaa;
       }
       ul.info-list {
+        :hover {
+          background-color: #eee;
+        }
         li.info-list-pickup  {
           ul.pickup-schedule  {
+            margin-top: 5px;
             border-bottom: 1px solid gray;
+            box-shadow: 0.1px 0.7px 1px 1px gray;
             line-height: 50px;
             display: flex;
             li.pickup-schedule__img {
               height: 44px;
-              width: 44px;
-              background-color: red;
+              width: 60px;
               margin: 3px;
+              .post-logo {
+                height: 100%;
+                width: 100%;
+              }
+            }
+            li.pickup-schedule__new {
+              span {
+                background-color: red;
+                color: white;
+                padding: 1px;
+              }
             }
             li {
-              font-size: 13px;
+              font-size: 12px;
               margin-right: 10px;
               padding-left: 10px;
             }
           }
         } 
+      }
+    }
+
+    &__point {
+      height: 100%;
+      width: 25%;
+      min-width: 100px;
+      background-color: white;
+      padding: 10px 0 30px 0;
+      margin-right: 10px;
+      font-weight: normal;
+      &__tab {
+        height: 100%;
+        width: 100%;
+        background-color: #ddd;
       }
     }
   }
