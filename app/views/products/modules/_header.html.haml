@@ -1,0 +1,49 @@
+.top-header
+  .top-header__inner
+    .top-header__inner__logo
+      =link_to image_tag("varenta_logo.png",class:"top-logo"),root_path
+      %p Hear & Make
+    .menu-btn
+
+    %button.form-btn
+      会員登録
+    
+    %ul.sns-btn
+      %li.insta_btn
+        = link_to "#"
+      %li
+        = link_to "#"
+      %li.insta_btn
+        = link_to "#"
+
+
+  .top-header__nav
+    %ul.nav-lists
+      %li.nav-list
+        = link_to "お知らせ" ,products_news_path
+        %br
+        %span news
+      %li.nav-list
+        = link_to "メニュー" ,products_price_path
+        %br
+        %span price
+      %li.nav-list
+        = link_to "ヘアスタイル" ,products_hairstyle_path
+        %br
+        %span hearstyle
+      %li.nav-list
+        = link_to "スタッフ",products_staff_path
+        %br
+        %span staff
+      %li.nav-list
+        = link_to "ショップ" ,products_onlineshop_path
+        %br
+        %span onlineshop
+      %li.nav-list
+        = link_to "コンタクト" ,products_contact_path
+        %br
+        %span contact
+     
+
+  
+    

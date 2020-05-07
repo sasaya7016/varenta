@@ -2,16 +2,22 @@ class ProductsController < ApplicationController
   def index
   end
 
-  def staff
+  def news
   end
-   
+
   def price
   end
 
-  def hear
+  def hairstyle
   end
 
-  def shop
+  def staff
+  end
+   
+  def onlineshop
+  end
+
+  def contact
   end
 
   # オンラインショップ購入

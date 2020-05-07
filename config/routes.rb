@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  # get 'products/index'
   root "products#index"
+  get "products/news"
+  get "products/price"
+  get "products/hairstyle"
   get "products/staff"
+  get "products/onlineshop"
+  get "products/contact"
 end
