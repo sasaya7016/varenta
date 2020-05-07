@@ -1,5 +1,15 @@
 # Varenta (美容室HP)
 ![varenta](https://user-images.githubusercontent.com/61730661/81335718-03908400-90e3-11ea-98ab-e39c7dbaf76d.jpg)
+
+## 🌐 App URL
+
+### **IP：000.000.00.00**
+**user：000, pass：000**  
+　
+## 💬 Usage
+
+`$ git clone 作成中` 
+
 ## 概要
 ### このアプリでできること
 ### gest機能
