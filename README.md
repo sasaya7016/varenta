@@ -1,5 +1,4 @@
-# README
-<h2 align="center">Ramen Timer</h2>
+<h2 align="center">VARENTA</h2>
 
 
 This README would normally document whatever steps are necessary to get the
