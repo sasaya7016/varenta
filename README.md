@@ -1,5 +1,5 @@
 # Varenta (美容室HP)
-
+![varenta](https://user-images.githubusercontent.com/61730661/81335718-03908400-90e3-11ea-98ab-e39c7dbaf76d.jpg)
 ## 概要
 ### このアプリでできること
 ### gest機能
