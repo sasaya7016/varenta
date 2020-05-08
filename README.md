@@ -1,4 +1,4 @@
-# Varenta（作成中）
+# Varenta（美容院HP 作成中）
 ![varenta](https://user-images.githubusercontent.com/61730661/81335718-03908400-90e3-11ea-98ab-e39c7dbaf76d.jpg)
 
 ## 🌐 App URL
