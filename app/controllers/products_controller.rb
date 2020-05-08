@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   def staff
   end
    
-  def onlineshop
+  def shop
   end
 
   def contact
