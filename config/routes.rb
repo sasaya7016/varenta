@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get "products/price"
   get "products/hairstyle"
   get "products/staff"
-  get "products/onlineshop"
+  get "products/shop"
   get "products/contact"
 end
