@@ -88,15 +88,18 @@
     .info__contents__point
       .info__contents__point__tab
         %h3 A B O U T
-        .map-img
-          = image_tag("map-img.jpg",class:"map-img")
-        %ul.sns-btn
-          %li.sns-btn__set
-            =link_to image_tag("sns.png",class:"sns-logo"),root_path
-          %li.sns-btn__line
-            =link_to image_tag("line.png",class:"sns-logo"),root_path
-          %li.sns-btn__youtube
-            =link_to image_tag("youtube.png",class:"sns-logo"),root_path
+        %button 
+          = link_to "MORE" ,products_news_path
+      .map-img
+        = image_tag("map-img.jpg",class:"map-img")
+        
+      %ul.sns-btn
+        %li.sns-btn__set
+          =link_to image_tag("sns.png",class:"sns-logo"),root_path
+        %li.sns-btn__line
+          =link_to image_tag("line.png",class:"sns-logo"),root_path
+        %li.sns-btn__youtube
+          =link_to image_tag("youtube.png",class:"sns-logo"),root_path
 
 
     
