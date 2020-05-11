@@ -33,6 +33,22 @@
       }
     }
     
+    button.reservation-btn {
+      width: 150px;
+      height: 40px;
+      font-size: 10px;
+      position: absolute;
+      top: 35px;
+      left: 0px;
+      text-decoration: none;
+      // background: #6699FF;/*ボタン色*/
+      color: black;
+      // border-bottom: solid 4px#3399FF;
+      // border-right: solid 2px #0099FF;
+      content: none;/*ボタンを押すと線が消える*/
+      
+    }
+
     button.form-btn {
       width: 150px;
       height: 40px;
