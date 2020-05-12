@@ -11,13 +11,20 @@
 `$ git clone 作成中` 
 
 ## 概要
-### このアプリでできること
+### 搭載予定機能
 ### gest機能
 * ユーザーの登録、ログイン、ログアウト、APIを使った認証ログイン登録
 * 予約機能、予約詳細、予約削除
-*  商品の購入、商品購入詳細
+* 商品の購入、商品購入詳細
 * マイページ機能から予約履歴、購入履歴の確認、ユーザー登録情報の変更、退会
 * 商品購入の際クレジットカードを登録させて購入
+
+### host機能 (id 1のみ制限)
+* ニュース、スケジュール投稿機能
+* blog投稿
+* 商品入替 (追加、編集、削除)
+* スタッフ変更
+
 
 ## 使用した技術
 * 言語:  Haml/SCSS/Javascript,Ruby/SQL
@@ -44,9 +51,6 @@
 |lastnameKANA|string|null: false|
 |firstnameKANA|string|null: false|
 |birth_date|date|null:false|
-|icon_image|string||
-|background_image|string||
-|profile|text||
 |email|string|null: false|
 |password|string|null: false|
 ### Association
@@ -55,36 +59,6 @@ source: :item
 - has_one :credit_card
 - has_one :address
 
-### itemsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|introduction|text|null: false|
-|price|integer|null: false|
-|category_id|integer|null:false|
-|item_size|string||
-|preparation_day|integer|null:false|
-|exhibitor_id|integer||
-|purchaser_id|integer||
-|delivery_fee|string|null:false|
-|prefecture_id|integer|null:false|
-### Association
-- belongs_to_active_hash :prefecture
-- accepts_nested_attributes_for :item_images, allow_destroy: true
-- belongs_to :user, foreign_key: "buyer_id", class_name: "User",optional: true
-- belongs_to :category, optional: true
-
-
-## item_sizesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|item_size|string|null :false|
-|ancestry|string||
-### Association
-- has_many :items
-- has_many :category_sizes
-- has_many :categories, through: :category_sizes
-- has_ancestry
 
 ## credit_cardsデーブル
 |Column|Type|Options|
@@ -109,31 +83,7 @@ source: :item
 - belongs_to :user, optional: true
 - belongs_to_active_hash :prefecture
 
-## categoryテーブル
+## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null :false|
-|ancestry|string||
-### Association
-- has_many :items
-- has_many :category_sizes
-- has_many :item_sizes, through: :category_sizes
-- has_ancestry
-
-## category_sizeテーブル
-|Column|Type|Options|
-|------|----|-------|
-|category_id|integer|null :false|
-|item_size_id|integer|null :false|
-### Association
-- belongs_to :category
-- belongs_to :item_size
-
-## sns_credentialsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|provider|string||
-|uid|string||
-|user_id|bigint||
-### Association
-- belongs_to :user, optional: true -->
+続き
