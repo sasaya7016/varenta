@@ -21,17 +21,17 @@
       }
     }
     .pickup__image {
-      width: 200px;
-      height: 200px;
+      width: 360px;
+      height: 360px;
       background-color: yellow;
     }
     .pickup__text {
-      width: 400px;
-      height: 400px;
+      width: 460px;
+      min-height: 360px;
       background-color: orange;
       position: absolute;
       top: 55px;
-      left: 280px;
+      left: 430px;
       z-index: 2;
     }
   }
@@ -48,7 +48,7 @@
     background-color: #ddd;
     padding: 30px 60px;
     position: absolute;
-    top: 0;
+    top: 245px;
     right: 50px;
     .side-ber__subject {
       border-bottom: solid 1px gray;
