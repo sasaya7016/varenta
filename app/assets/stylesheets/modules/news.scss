@@ -27,7 +27,7 @@
     }
     .pickup__text {
       width: 460px;
-      min-height: 360px;
+      min-height: 500px;
       background-color: orange;
       position: absolute;
       top: 55px;
@@ -35,16 +35,10 @@
       z-index: 2;
     }
   }
-  &__past-article {
-    width: calc(100% - 400px);
-    height: 200px;
-    background-color: gray;
-    z-index: 2;
-    position: absolute;
-  }
+  
   &__side-bar {
     width: 300px;
-    height: 800px;
+    min-height: 600px;
     background-color: #ddd;
     padding: 30px 60px;
     position: absolute;
