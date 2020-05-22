@@ -5,12 +5,46 @@
   .news-contents__pickup
     .pickup__subject
       %h2 2020.05.03
-      %h2 title
+      %h2 title : 新規オープンのご案内
     .pickup__image
+      = image_tag("main.logo2.jpg",class:"news-logo")
+      皆さんお待ちしております！！
+
     .pickup__text
+      %p ≪タイトル≫新規オープンのお知らせ≪タイトル≫
+      %br 拝啓  ○○の候  皆様にはますますご清栄のこととお慶び申し上げます
+      %br 日頃は格別のご愛顧を賜り心より感謝申し上げます
+      %br さて 左記の通り小社運営による「Varenta」におきまして新店舗をオープンすることになりました
+      %br これもひとえに皆様方の変わらぬご支援とお引き立てのおかげと心より厚くお礼申し上げます
+      %br 皆様にご満足いただけますよう○○○○店長以下従業員一同  
+      %br 真心を込めて業務に専念してまいる所存でございます
+      %br 今後とも  より一層のご支援ご愛顧のほど切にお願い申し上げます
+      %br まずは略儀ながら書中をもちまして開店のご挨拶申し上げます
+      %br 敬具
+      %br 令和○年○月
+      %br
+      %span.textdata
+        %br 記
+        %br 開店日  ○年○月○日（○曜日）  AM9：00開店
+        %br 新店舗名  ○○○○  大阪店
+        %br 住所   〒171-0014 大阪市
+        %br 電話 052-****-****
+
+        %br 株式会社○○○○
+        %br 代表取締役　山田太郎
+
       
   .news-contents__side-bar
     .side-ber__subject
       %h2 past article
+      %hr 
+      %ul
+        %li 
+          =link_to "5月営業日"
+        %li 
+          =link_to "従業員出勤"
+        %li 
+          =link_to "6月営業日"
+
 
 = render "products/modules/footer"
