@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
   # オンラインショップ投稿
   def new
-    @products = Item.new
+    # @products = Item.new
   end
 
 end
