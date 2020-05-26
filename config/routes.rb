@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   
   root "products#index"
+  resources :products, only: [:new, :create]
   get "products/news"
   get "products/price"
   get "products/hairstyle"
@@ -15,5 +16,7 @@ Rails.application.routes.draw do
   get "products/shop"
   get "products/contact"
   
+  resources :products, only: [:index, :new, :create]
+
   resources :users, only: :show
 end

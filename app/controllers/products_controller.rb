@@ -2,8 +2,7 @@ class ProductsController < ApplicationController
   def index
   end
 
-  def news
-  end
+
 
   def price
   end
@@ -20,8 +19,9 @@ class ProductsController < ApplicationController
   def contact
   end
 
-  # オンラインショップ購入
-  # def new
-  # end
+  # オンラインショップ投稿
+  def new
+    @products = Item.new
+  end
 
 end
