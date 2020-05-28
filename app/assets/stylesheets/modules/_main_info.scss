@@ -19,7 +19,7 @@
     }
     &__news {
       height: 100%;
-      width: 35%;
+      width: 50%;
       min-width: 350px;
       background-color: white;
       padding: 10px;
@@ -73,7 +73,7 @@
 
     &__schedule{
       height: 100%;
-      width: 35%;
+      width: 50%;
       min-width: 350px;
       background-color: white;
       padding: 10px;
@@ -121,57 +121,6 @@
             }
           }
         } 
-      }
-    }
-
-    &__point {
-      height: 100%;
-      width: 25%;
-      min-width: 100px;
-      background-color: white;
-      padding: 10px;
-      margin-right: 10px;
-      font-weight: normal;
-      &__tab {
-        height: 25px;
-        width: 100%;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 20px;
-        padding-left: 20px;
-        display: flex;
-        justify-content: space-between;
-       
-      }
-
-      .map-img {
-        height: 100px;
-        width: 270px;
-        border: solid 1px #ccc;
-      }
-
-      ul.sns-btn {
-        display: flex;
-        .sns-btn__set img.sns-logo {
-          width: 130px;
-          height: 70px;
-          position: absolute;
-          top: 145px;
-          right: 190px;
-        }
-        .sns-btn__line img.sns-logo {
-          width: 55px;
-          height: 60px;
-          position: absolute;
-          top: 145px;
-          right: 45px;
-        }
-        .sns-btn__youtube img.sns-logo {
-          width: 95px;
-          height: 60px;
-          position: absolute;
-          top: 145px;
-          right: 90px;
-        }
       }
     }
   }
