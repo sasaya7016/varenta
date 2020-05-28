@@ -1,3 +1,15 @@
+* {box-sizing: border-box;}
+
+//  [fonts googleapis]
+// ------------------------------
+// font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+// font-family: 'M PLUS 1p', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');
+// ------------------------------
+
+
+
 @import "modules/reset";
 @import "modules/header";
 @import "modules/main";
@@ -14,3 +26,5 @@
 
 // 投稿機能
 @import "modules/new";
+// test
+@import "modules/test";
