@@ -26,7 +26,7 @@
 :javascript
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    effect: 'coverflow',
+    //effect: 'coverflow',
     navigation: {
       prevEl: '.swiper-button-prev', //左側にあるこれ「＜」
       nextEl: '.swiper-button-next', //右側にあるこれ「＞」
@@ -39,7 +39,7 @@
       clickable: true, //クリック判定の有無
     },
     autoplay: { //自動スライド
-      -# delay: 8000, //8秒ごとに
-      -# disableOnInteraction: true
+      delay: 8000, //8秒ごとに
+      disableOnInteraction: true
     },
   });
