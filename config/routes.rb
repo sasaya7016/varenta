@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "products/staff"
   get "products/shop"
   get "products/contact"
+  get "products/test"
   
   resources :products, only: [:index, :new, :create]
 

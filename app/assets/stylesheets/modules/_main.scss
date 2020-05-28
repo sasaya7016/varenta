@@ -1,35 +1,21 @@
 .main {
-  height: 300px;
+  height: 400px;
   width: 100%;
   background-color: white;
   padding: 0 50px;
   margin-bottom: 5px;
-  &__screen {
-    height: 300px;
+  .swiper-container {
+    height: 100%;
     width: 100%;
+    background-color:gray;
     min-width: 1000px;
-    position: relative;
-    z-index: 1;
-    &__left {
-      height: 100%;
-      width: 50%;
-      min-width: 500px;
-      position: absolute;
-      z-index: 2;
-      left: 0;
-      background: image-url("main.logo2.jpg");
-      background-size: cover;
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
-    &__right {
-      height: 100%;
-      width: 50%;
-      min-width: 500px;
-      position: absolute;
-      z-index: 2;
-      right: 0;
-      background: image-url("main.logo2.webp");
-      background-size: cover;
-    }
+  
   }
   &__border {
     height: 280px;
@@ -41,9 +27,6 @@
     z-index: 3;
     top: 225px;
     left: 60px;
-
-
-
   }
   &__title {
     position: absolute;

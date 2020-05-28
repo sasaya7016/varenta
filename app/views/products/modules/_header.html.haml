@@ -5,12 +5,7 @@
       %p Hear & Make
     .menu-btn
 
-    %button.reservation-btn
-      予約フォーム
-    %button.management-btn
-      管理機能
-    
-
+   
 
     %button.form-btn
       - if user_signed_in?
@@ -29,32 +24,33 @@
   .top-header__nav
     %ul.nav-lists
       %li.nav-list
-        = link_to "お知らせ" ,products_news_path
-        %ul
-          %li 
-            = link_to "NEWS"
-          %li
-            = link_to "schedule"
-        %br
-        %span news
+        = link_to products_news_path class:"nav-list__point" do
+          お知らせ
+          %br
+          %span news
       %li.nav-list
-        = link_to "メニュー" ,products_price_path
-        %br
-        %span price
+        = link_to products_price_path class:"nav-list__point" do
+          メニュー
+          %br
+          %span price
       %li.nav-list
-        = link_to "ヘアスタイル" ,products_hairstyle_path
-        %br
-        %span hearstyle
+        = link_to products_hairstyle_path class:"nav-list__point" do
+          ヘアスタイル
+          %br
+          %span hearstyle
       %li.nav-list
-        = link_to "スタッフ",products_staff_path
-        %br
-        %span staff
+        = link_to products_staff_path class:"nav-list__point" do
+          スタッフ
+          %br
+          %span staff
       %li.nav-list
-        = link_to "ショップ" ,products_shop_path
-        %br
-        %span onlineshop
+        = link_to products_shop_path class:"nav-list__point" do
+          ショップ
+          %br
+          %span onlineshop
       %li.nav-list
-        = link_to "コンタクト" ,products_contact_path
-        %br
-        %span contact
+        = link_to products_contact_path class:"nav-list__point" do
+          予約フォーム
+          %br
+          %span contact
     

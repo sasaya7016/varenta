@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   def index
   end
 
-
+  def test
+  end
 
   def price
   end
