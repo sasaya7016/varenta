@@ -404,3 +404,19 @@ table {
   text-decoration: none;
   font-size: 15px;
 }
+
+.name__logo {
+  font-family: 'Caveat', cursive;
+  width: 100%;
+  font-size: 150px;
+  
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 5;
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+
+}

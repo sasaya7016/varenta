@@ -5,22 +5,45 @@
     .swiper-wrapper
       -# 各スライド
       .swiper-slide 
-        = image_tag("main.logo.jpg",class:"post-logo")
         .slide-first
+          .screen__center
+            = image_tag("main.logo.jpg",class:"post-logo")
+
           .slide-first__title
             Varenta
           .slide-first__text
             %h2 NEW OPEN
             %p &nbsp;&nbsp; 2020.04.01
 
-      -# .swiper-slide 
-      -#   .slide-second
-      -#     .screen__left
-      -#       = image_tag("main.logo2.jpg",class:"post-logo")
-      -#     .screen__right
-      -#       4月1日OPEN
+      .swiper-slide 
+        .slide-second
+          .screen__left
+            = image_tag("user/background11.jpeg",class:"post-logo")
+          .screen__right
+            OPEN Campaign
+            %br
+            Cut 10%OFF
+            %br
+            4/1〜4/30
+               
+      .swiper-slide 
+        .slide-third 
+          .screen__left
+            お知らせ
+            %br 
+            %br SNSアカウント開設いたしました。
+            お店の情報やお得なクーポン・商品情報、スタッフブログについて更新しております。
+            %ul
+              %li Instagram
+                
+              %li Twitter
+              %li facebook
             
-      -# .swiper-slide 
+           
+          .screen__right
+            = image_tag("user/background8.jpeg",class:"post-logo")
+
+
         
       -# .swiper-slide
       -#   = image_tag("main.logo.jpg",class:"post-logo")
@@ -48,7 +71,7 @@
       clickable: true, //クリック判定の有無
     },
       autoplay: { //自動スライド
-      delay: 55000, //8秒ごとに
+      delay: 8000, //8秒ごとに
       disableOnInteraction: true
     },
   });

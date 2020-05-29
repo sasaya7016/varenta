@@ -6,14 +6,14 @@
   margin-bottom: 5px;
   position: relative;
   &__pickup {
-    width: calc(100% - 300px);
-    min-width: calc(100% - 300px);
+    width: 80%;
+    min-width: 1300px;
     height: 600px;
     background-color: #eee;
     padding: 30px 60px;
     .pickup__subject {
-      max-width: 900px;
-      min-width: 900px;
+      max-width: 865px;
+      min-width: 865px;
       border-bottom: solid 1px gray;
       display: flex;
       background-color: white;
@@ -37,8 +37,8 @@
       }
     }
     .pickup__text {
-      max-width: 500px;
-      min-width: 500px;
+      max-width: 100%;
+      min-width: 555px;
       min-height: 500px;
       background-color: #fff;
       font-size: 10px;
@@ -56,13 +56,13 @@
   }
   
   &__side-bar {
-    width: 300px;
+    width: 20%;
     min-height: 600px;
     background-color: #ddd;
     padding: 30px 60px;
     position: absolute;
     top: 0px;
-    left: 70%;
+    left: 75%;
     z-index: 1;
     .side-ber__subject {
      

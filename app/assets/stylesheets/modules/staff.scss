@@ -12,6 +12,7 @@ $a-height: 300px;
   
   padding: 0 50px;
   .staff-title {
+    min-width: 1300px;
     text-align: center;
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
@@ -20,10 +21,14 @@ $a-height: 300px;
   
   .staff-main {
     width: 100%;
+    min-width: 1300px;
     background-color: #eee;
-    
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    .staff-text {
+      padding: 30px;
+    }
     .staff__left {
       width: 49%;
       &__pick {

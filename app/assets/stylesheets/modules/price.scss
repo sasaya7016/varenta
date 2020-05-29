@@ -6,6 +6,7 @@
   font-family: 'Roboto', sans-serif;
   &__title {
     width: 100%;
+    min-width: 1300px;
     height: 100px;
     background-color: #ddd;
     h1 {
@@ -19,6 +20,7 @@
 
   &__main {
     width: 100%;
+    min-width: 1300px;
     height: 100%;
     display: flex;
     h2 {
