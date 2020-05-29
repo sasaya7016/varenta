@@ -1,16 +1,13 @@
-# Varenta（美容院HP 作成中）
-![varenta](https://user-images.githubusercontent.com/61730661/81335718-03908400-90e3-11ea-98ab-e39c7dbaf76d.jpg)
+# Varenta
+![varenta](https://user-images.githubusercontent.com/61730661/83250469-1fb7aa80-a1e3-11ea-92db-e564e51a5186.jpg)
 
 ## 🌐 App URL
-
 ### **IP：000.000.00.00**
-**user：000, pass：000**  
-　
-## 💬 Usage
-
-`$ git clone 作成中` 
 
 ## 概要
+美容院のHPをイメージして作成しております。
+現状マークアップでの大枠の作成のみでございますが、追加で修正や機能のカスタマイズをしていく予定でございます。
+
 ### 搭載予定機能
 ### gest機能
 * ユーザーの登録、ログイン、ログアウト、APIを使った認証ログイン登録
@@ -19,7 +16,7 @@
 * マイページ機能から予約履歴、購入履歴の確認、ユーザー登録情報の変更、退会
 * 商品購入の際クレジットカードを登録させて購入
 
-### host機能 (id 1のみ制限)
+### host機能 
 * ニュース、スケジュール投稿機能
 * blog投稿
 * 商品入替 (追加、編集、削除)
@@ -30,16 +27,8 @@
 * 言語:  Haml/SCSS/Javascript,Ruby/SQL
 * FW:  Ruby on Rails
 * DB:  MySQL
-* AWS:  EC2,S3,Route 53
-* ミドルウェア:  Unicorn,Nginx
+* heroku ▶︎ AWSに切替予定
   
-
-## 制作背景
-> HP制作を依頼があったことを想定して、美容院HP作成
-> プログラミングスクールで学んだ内容を復習しつつ個人で作成した。
-
-
-
 
 ## データベース設計 
 ### usersテーブル
