@@ -1,19 +1,19 @@
 .news-contents {
   width: 100%;
-  min-width: 1000px;
+  min-width: 1300px;
   background-color: #fff;
   padding: 0 50px;
   margin-bottom: 5px;
   position: relative;
   &__pickup {
     width: calc(100% - 300px);
-    min-width: 900px;
+    min-width: calc(100% - 300px);
     height: 600px;
     background-color: #eee;
     padding: 30px 60px;
     .pickup__subject {
-      max-width: 770px;
-      min-width: 770px;
+      max-width: 900px;
+      min-width: 900px;
       border-bottom: solid 1px gray;
       display: flex;
       background-color: white;
@@ -37,8 +37,8 @@
       }
     }
     .pickup__text {
-      min-width: calc(100% - 300px -360px);
-      // min-width: 450px;
+      max-width: 500px;
+      min-width: 500px;
       min-height: 500px;
       background-color: #fff;
       font-size: 10px;
@@ -62,7 +62,7 @@
     padding: 30px 60px;
     position: absolute;
     top: 0px;
-    left: 950px;
+    left: 70%;
     z-index: 1;
     .side-ber__subject {
      
