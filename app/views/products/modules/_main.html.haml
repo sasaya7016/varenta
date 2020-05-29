@@ -1,5 +1,4 @@
 .main
-
   -# Swiper START
   .swiper-container
     -# メイン表示部分
@@ -7,29 +6,39 @@
       -# 各スライド
       .swiper-slide 
         = image_tag("main.logo.jpg",class:"post-logo")
-      .swiper-slide 
-        = image_tag("main.logo2.jpg",class:"post-logo")
-      .swiper-slide 
-        = image_tag("main.logo2.webp",class:"post-logo")
+        .slide-first
+          .slide-first__title
+            Varenta
+          .slide-first__text
+            %h2 NEW OPEN
+            %p &nbsp;&nbsp; 2020.04.01
+
+      -# .swiper-slide 
+      -#   .slide-second
+      -#     .screen__left
+      -#       = image_tag("main.logo2.jpg",class:"post-logo")
+      -#     .screen__right
+      -#       4月1日OPEN
+            
+      -# .swiper-slide 
+        
       -# .swiper-slide
       -#   = image_tag("main.logo.jpg",class:"post-logo")
     .swiper-pagination
       -# Swiper END
--#   .main__screen__left
--#   .main__screen__right
+  
   .main__border
-  .main__title
-    %h2 NER 0PEN
-    %p &nbsp;&nbsp; 2020.04.01
 
 
+
+//あとでjsにfile別途作成(一時的記述)
 :javascript
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     //effect: 'coverflow',
     navigation: {
-      prevEl: '.swiper-button-prev', //左側にあるこれ「＜」
-      nextEl: '.swiper-button-next', //右側にあるこれ「＞」
+      prevEl: '.swiper-button-prev', 
+      nextEl: '.swiper-button-next', 
     },
     loop: true, //画像のループの有無
     speed: 1000, //スライドするスピード
@@ -38,8 +47,8 @@
       type: 'bullets',
       clickable: true, //クリック判定の有無
     },
-    autoplay: { //自動スライド
-      delay: 8000, //8秒ごとに
+      autoplay: { //自動スライド
+      delay: 55000, //8秒ごとに
       disableOnInteraction: true
     },
   });
