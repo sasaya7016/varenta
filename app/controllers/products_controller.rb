@@ -20,6 +20,9 @@ class ProductsController < ApplicationController
   def contact
   end
 
+  def management
+  end
+
   # オンラインショップ投稿
   def new
     # @products = Item.new
