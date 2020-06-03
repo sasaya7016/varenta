@@ -45,18 +45,9 @@
 ### Association
 - has_many :items
 source: :item
-- has_one :credit_card
 - has_one :address
 
 
-## credit_cardsデーブル
-|Column|Type|Options|
-|------|----|-------|
-|customer_id|string|null: false|
-|card_id|string|null :false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user, optional true
 
 ## addressテーブル
 |Column|Type|Options|
@@ -75,4 +66,9 @@ source: :item
 ## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
-続き
+name|string|null: false|
+introduction|text|null: false|
+price|integer|null: false|
+brand|string|
+category_id|integer|null:false|
+
