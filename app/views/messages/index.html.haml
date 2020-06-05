@@ -1,0 +1,67 @@
+= render "products/modules/header"  
+
+.chat-containar
+  .side-bar
+    .header
+      %h3.header__name
+        -# = current_user.name
+      %ul.header__lists
+        %li.list
+          = link_to new_group_path do
+            = icon('fas', 'pen-square', class: 'icon')
+        %li.list
+          = icon('fas', 'cog', class: 'icon')
+          -# = link_to edit_user_path(current_user) do
+          -#   = icon('fas', 'cog', class: 'icon')
+      
+    .group-list
+      -# - current_user.groups.each do |group|
+        .group
+          -# = link_to group_messages_path(group) do
+          -#   .group-list__name
+        -#   = group.name
+        .group-list__message
+          -# = group.show_last_message
+
+
+
+  .chat-main
+    .header
+      .header__group
+        %h2.header__group__name
+          -# = @group.name
+        %p.header__group__member 
+          Member :
+          -# - @group.users.each do |user|
+            -# = user.name
+      %p.header__group-edit
+        -# = link_to 'Edit', edit_group_path(@group) 
+
+
+    .message
+      -# .messages{data: {message: {id: message.id}}}
+        .messages__left
+          %ul.messages__left__name 
+            -# = message.user.name
+        
+          .messages__left__date
+            -# = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        .messages__comment
+          -# - if message.content.present?
+          -#   %p.lower-message__content
+          -#     = message.content
+          -# = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    
+
+
+    .forms
+      -# = form_for [@group, @message] do |f|
+        .form
+          -# = f.text_field :content, class: 'form__text',    placeholder: 'type a message'
+          .input
+        -#     = f.label :image, class: 'input__file' do
+        -#       = icon('fas', 'image', class: 'image')
+        -#       = f.file_field :image, class: 'file'
+        -# = f.submit 'Send', class: 'send-btn'
+
+-# =render "products/modules/footer" 
