@@ -24,7 +24,7 @@
   .top-header__nav
     %ul.nav-lists
       %li.nav-list
-        = link_to products_news_path class:"nav-list__point" do
+        = link_to posts_path class:"nav-list__point" do
           お知らせ
           %br
           %span news
@@ -53,4 +53,10 @@
           予約フォーム
           %br
           %span contact
+
+      %li.nav-list
+        = link_to new_group_path class:"nav-list__point" do
+          お問い合わせ
+          %br
+          %span chatform
     

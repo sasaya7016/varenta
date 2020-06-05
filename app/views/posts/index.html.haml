@@ -1,0 +1,44 @@
+= render "products/modules/header"
+-# = render "products/modules/pankuzu"
+
+
+.news-contents
+  -@posts.each do |post|
+    .news-contents__pickup
+      = link_to '詳細', "/posts/#{post.id}", method: :get
+      = link_to '編集', "/posts/#{post.id}/edit", method: :get
+      = link_to '削除', "/posts/#{post.id}", method: :delete
+      .pickup__subject
+        %h2 
+          = post.created_at
+        %h2 
+          = post.name
+      .pickup__image
+        -# = post.image
+
+      -# 従業員一同お待ちしております。
+      -# %br お気をつけてお越しくださいませ。
+
+    .pickup__text
+      = post.text
+
+  .pager
+    .page-btn
+      = paginate @posts
+
+      
+  .news-contents__side-bar
+    .side-ber__subject
+      %h2 past article
+      %hr 
+      %ul
+        %li 
+          =link_to "5月営業日"
+        %li 
+          =link_to "従業員出勤"
+        %li 
+          =link_to "6月営業日"
+
+
+= render "products/modules/main_info"
+= render "products/modules/footer"
