@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
 
-  def index
+  def more
     @posts = Post.all
     @posts = Post.page(params[:page]).per(2).order('updated_at DESC')
+  end
+
+  def index
+    @posts = Post.all
+    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
   end
   
   def new

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:edi, :update]
   resources :groups, only: [:new, :create]
   
- 
+  get "posts/more"
   resources :posts
 
   resources :users, only: :show
