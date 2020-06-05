@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :products
   has_one :address
+  
 
   devise :database_authenticatable, :registerable,
 
