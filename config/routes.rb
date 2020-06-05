@@ -19,7 +19,14 @@ Rails.application.routes.draw do
   get "products/management"
   get "products/test"
   
-  resources :products, only: [:index, :new, :create]
+  
+  get "messages/index"
+  resources :messages, only: [:edi, :update]
+  resources :groups, only: [:new, :create]
+  
+ 
+  resources :posts
 
   resources :users, only: :show
+
 end
