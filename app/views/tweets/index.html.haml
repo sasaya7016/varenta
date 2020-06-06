@@ -1,0 +1,24 @@
+=render "products/modules/header"
+.kuchikomi
+  .kuchikomi-form
+    = form_with(model: @tweet, local: true) do |f|
+      %p 投稿
+      = f.text_area :text,placeholder:"text"
+      = f.submit "send"
+
+
+
+
+  .kuchikomi-list
+    -@tweets.each do |tweet|
+      .name
+        = tweet.user.nickname
+      .text
+        = tweet.text
+      %ul.select
+        %li.select-list
+          = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+          -if user_signed_in? && current_user.id == @tweet.user_id
+            = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+            = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+  = paginate(@tweets)

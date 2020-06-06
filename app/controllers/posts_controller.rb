@@ -21,6 +21,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.all
+    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
   end
 
   def edit
