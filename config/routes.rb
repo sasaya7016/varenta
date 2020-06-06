@@ -27,6 +27,11 @@ Rails.application.routes.draw do
   get "posts/more"
   resources :posts
 
+
+  resources :tweets do
+    resources :comments
+  end
+
   resources :users, only: :show
 
 end

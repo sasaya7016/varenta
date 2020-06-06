@@ -1,0 +1,6 @@
+.kuchikomi
+  .kuchikomi-form
+    = form_with(model: @tweet, local: true) do |f|
+      %p 投稿
+      = f.text_area :text,placeholder:"text"
+      = f.submit "send"

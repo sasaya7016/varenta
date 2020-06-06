@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def more
     @posts = Post.all
@@ -20,6 +21,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.all
+    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
   end
 
   def edit
@@ -42,6 +45,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
 end

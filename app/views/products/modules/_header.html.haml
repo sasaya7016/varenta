@@ -9,7 +9,7 @@
 
     %button.form-btn
       - if user_signed_in?
-        =  link_to "ログアウト", destroy_user_session_path
+        =  link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
         =  link_to "ログイン", new_user_session_path
     %button.mypage-btn
@@ -55,8 +55,8 @@
           %span contact
 
       %li.nav-list
-        = link_to new_group_path class:"nav-list__point" do
-          お問い合わせ
+        = link_to tweets_path class:"nav-list__point" do
+          口コミ
           %br
-          %span chatform
+          %span Review
     

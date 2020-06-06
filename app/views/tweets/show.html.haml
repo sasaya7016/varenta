@@ -1,0 +1,29 @@
+= render "products/modules/header"
+.kuchikomi
+
+  .kuchikomi-list
+    .name
+      = @tweet.user.nickname
+    .text
+      = @tweet.text
+    %ul.select
+      %li.select-list
+        = link_to '戻る', "/tweets/", method: :get
+     
+        = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
+        = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+     
+  
+  .kuchikomi-post
+    - if current_user
+      = form_with(model:[@tweet, @comment], local: true) do |f|
+        = f.text_area :text, placeholder: "コメントする", rows: "2" 
+        = f.submit "SEND"
+    -else
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+    .comments
+      コメント一覧
+      -if @comments
+        -@comments.each do |comment|
+          = comment.text
