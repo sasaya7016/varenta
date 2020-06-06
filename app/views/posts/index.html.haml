@@ -42,15 +42,15 @@
     .info__contents__news
       %h3 N E W S
       - @posts.first(3).each do |post|
-        = link_to post_path(post.id) do
+        
 
-          .info__contents__news__title
+        .info__contents__news__title
 
-            %button 
-              = link_to 'MORE', "/posts/#{post.id}", method: :get
+          -# %button 
+          -#   = link_to 'MORE', "/posts/#{post.id}", method: :get
           %ul.info-list
             %li.info-list-pickup 
-              = link_to products_news_path class:"pickup-news " do
+              = link_to "/posts/#{post.id}", class:"pickup-news " ,method: :get do
                 %ul.pickup-news 
                   %li.pickup-news__img
                     = image_tag("news.png",class:"post-logo")
