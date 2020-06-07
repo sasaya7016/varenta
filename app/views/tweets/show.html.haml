@@ -1,20 +1,27 @@
 = render "products/modules/header"
-.kuchikomi
 
-  .kuchikomi-list
-    .name
-      = @tweet.user.nickname
-    .text
-      = @tweet.text
-    %ul.select
-      %li.select-list
-        = link_to '戻る', "/tweets/", method: :get
-     
-        = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-        = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
-     
+.review
+  .review__tweets
+    %h1 投稿
+    %p お店の商品や利用していただいた方へ
+    %p ご要望・ご指摘がございましたら、ご記入ください。
+
+
+    .review-list-show
+      .user-name
+        = @tweet.user.nickname
+      .text
+        = @tweet.text
+
+      %ul.select
+        %li.select-list
+          = link_to '戻る', "/tweets/", method: :get
+      
+          = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
+          = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+      
   
-  .kuchikomi-post
+  .review-comments
     - if current_user
       = form_with(model:[@tweet, @comment], local: true) do |f|
         = f.text_area :text, placeholder: "コメントする", rows: "2" 
