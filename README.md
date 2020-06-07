@@ -21,7 +21,13 @@
 * 商品の購入、詳細
 * ユーザー登録情報
 
-### HOST機能 (user:admin 管理者)
+### HOST機能 (管理者)
+▶︎このID／Passのみ使用可能
+  Log_in ID
+  nickname:管理者
+  email: "admin@gmail.com",
+  password:  "11111111",
+
 * 管理者のログイン、ログアウト(seeds.rbにて作成して使い分け)
 * お知らせの投稿、編集、詳細、削除
 
