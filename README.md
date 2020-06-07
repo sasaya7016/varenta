@@ -9,19 +9,21 @@
 現状マークアップでの大枠の作成のみでございますが、追加で修正や機能のカスタマイズをしていく予定でございます。
 
 
-### 搭載予定機能
-### gest機能
+## 機能
+### GEST機能
 * ユーザーの登録、ログイン、ログアウト
-<!-- * 予約機能、予約詳細、予約削除
-* 商品の購入、商品購入詳細 -->
-<!-- * マイページ機能から予約履歴、購入履歴の確認、ユーザー登録情報の変更、退会
-* 商品購入の際クレジットカードを登録させて購入 -->
+* レビューの投稿、削除 
+* レビュー ▶︎ コメント投稿、削除
 
-### host機能 
-* ニュース投稿機能(投稿/詳細/編集/削除)
-* blog投稿
-<!-- * 商品入替 (追加、編集、削除) -->
-<!-- * スタッフ変更 -->
+搭載予定
+* レビュー ▶︎ いいね機能
+* 予約/問合せ チャット機能
+* 商品の購入、詳細
+* ユーザー登録情報
+
+### HOST機能 (user:admin 管理者)
+* 管理者のログイン、ログアウト(seeds.rbにて作成して使い分け)
+* お知らせの投稿、編集、詳細、削除
 
 
 ## 使用した技術
@@ -44,10 +46,11 @@
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :items
-source: :item
-- has_one :address
-
+has_many :products
+has_one :address
+has_many :tweets
+has_many :comments
+has_many :posts
 
 
 ## addressテーブル
@@ -61,8 +64,9 @@ source: :item
 |phone_number|integer||
 |user_id|references||
 ### Association
-- belongs_to :user, optional: true
-- belongs_to_active_hash :prefecture
+belongs_to_active_hash :prefecture
+belongs_to :user, optional: true
+
 
 ## productsテーブル
 |Column|Type|Options|
@@ -70,6 +74,39 @@ source: :item
 name|string|null: false|
 introduction|text|null: false|
 price|integer|null: false|
-brand|string|
-category_id|integer|null:false|
+...随時追加
+### Association
+belongs_to :user
+※商品購入機能追加予定
+
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+name|string|null: false|
+text|string|null: false|
+image|text|
+### Association
+belongs_to :user (admin:管理者のみ使用可)
+
+
+## tweetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+name|string|null: false|
+text|string|null: false|
+user_id|string|
+### Association
+belongs_to :user
+has_many :comments
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+user_id|integer|
+tweet_id|integer|
+text|text|
+### Association
+belongs_to :tweet
+belongs_to :user 
 
