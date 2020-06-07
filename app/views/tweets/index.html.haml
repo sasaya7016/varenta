@@ -1,24 +1,35 @@
 =render "products/modules/header"
-.kuchikomi
-  .kuchikomi-form
-    = form_with(model: @tweet, local: true) do |f|
-      %p 投稿
-      = f.text_area :text,placeholder:"text"
-      = f.submit "send"
+.review
+  .review__tweets
+    %h1 投稿
+    %p お店の商品や利用していただいた方へ
+    %p ご要望・ご指摘がございましたら、ご記入ください。
+
+    .review-list
+      -@tweets.each do |tweet|
+        .user-name
+          = tweet.user.nickname
+        .text
+          = tweet.text
+
+        %ul.select
+          %li.select-list
+            = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+            -if user_signed_in? && current_user.id == @tweet.user_id
+              = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+              = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+      = paginate(@tweets)
+
+
+    .review-form
+      = form_with(model: @tweet, local: true) do |f|
+      
+
+        = f.text_area :text,placeholder:"text"
+        %br
+        = f.submit "send"
 
 
 
 
-  .kuchikomi-list
-    -@tweets.each do |tweet|
-      .name
-        = tweet.user.nickname
-      .text
-        = tweet.text
-      %ul.select
-        %li.select-list
-          = link_to '詳細', "/tweets/#{tweet.id}", method: :get
-          -if user_signed_in? && current_user.id == @tweet.user_id
-            = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-            = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
-  = paginate(@tweets)
+    
