@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   def index
+    @posts = Post.all
+    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
   end
 
   def test
