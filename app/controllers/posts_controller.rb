@@ -2,40 +2,38 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
   before_action :move_to_index, except: [:index, :show]
 
-  def more
-    @posts = Post.all
-    @posts = Post.page(params[:page]).per(2).order('updated_at DESC')
-  end
 
   def index
     @posts = Post.all
-    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
-  end
-  
-  def new
+    @posts = Post.page(params[:page]).per(10).order('updated_at DESC')
     @post = Post.new
   end
 
   def create
     Post.create(post_params)
+    redirect_to action: :index 
   end
 
   def show
     @posts = Post.all
-    @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
+    @posts = Post.page(params[:page]).per(10).order('updated_at DESC')
   end
 
   def edit
+    @posts = Post.all
+    @posts = Post.page(params[:page]).per(10).order('updated_at DESC')
   end
 
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+    redirect_to action: :index 
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
+    redirect_to action: :index 
   end
 
   private
