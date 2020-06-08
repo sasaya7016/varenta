@@ -1,0 +1,39 @@
+.news-wrapper
+  .news-contents
+    .news-contents__pickup
+      .pickup__subject
+        %h2 投稿日：
+        %h2 
+          = @post.created_at.strftime('%Y/%m/%d %H:%M:%S')
+        
+      .pickup__image
+        .pickup__image__first
+          = image_tag("main.logo2.jpg",class:"post-logo")
+          -# = @post.image
+        .pickup__image__second
+          = image_tag("main.logo.jpg",class:"post-logo")
+
+      .pickup__text
+        .pickup__text__title
+          %h1 
+            = @post.name
+        .pickup__text__main
+          %p
+            = simple_format @post.text
+
+
+
+      .news-contents__side-bar
+        .side-ber__subject
+          %h2 past article
+          %hr 
+          - @posts.first(10).each do |post|
+            %ul
+              %li 
+                = link_to "#{post.name}", "/posts/#{post.id}", method: :get
+              %br
+
+
+        -# = link_to '詳細', "/posts/#{@post.id}", method: :get
+  
+  

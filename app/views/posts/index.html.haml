@@ -1,90 +1,29 @@
+-# ------------------------------
+-#           Header
+-# ------------------------------
+
 = render "products/modules/header"
 
+-# ------------------------------
+-#           Admin
+-# ------------------------------
+
 -if user_signed_in? && current_user.admin
-  = render "posts/modules/news_post"
+  -# = render "posts/admin/news_post"
+  = render "posts/admin/news_form"
+  = render "posts/admin/news_list"
 
-
-
-
-
-  .post
-    .post__main
-      = form_with(model: @post, local: true, ) do |f|
-        .post__main__image
-          %p 画像
-          =f.text_field :image , class: "post-form"
-          
-
-        .post__main__name
-          %p タイトル名
-          %p.required 必須
-          =f.text_field :name, class: "post-form", placeholder: "20字まで"
-
-        .post__main__name
-          %p 投稿文
-          %p.required 必須
-          =f.text_area :text, class: "post-form", placeholder: "20字まで"
-
-        .post__btns
-          =f.submit class: "submit-btn btn", value: "投稿する"
-          =link_to "戻る", posts_path , class: "btn-back"
-
-  .news-lists
-    .news-lists__pickup
-      %table.table
-        %thead
-          %tr
-            %th.scope 投稿日
-            %th.scope タイトル
-            %th.scope 詳細
-            %th.scope 編集
-            %th.scope 削除
-
-        %tbody
-          -@posts.each do |post|
-            %tr
-              %th.scope
-                = post.created_at.strftime('%Y/%m/%d %H:%M:%S')
-              %th.scope 
-                = post.name
-              %th.scope 
-                = link_to '詳細', "/posts/#{post.id}", method: :get
-              %th.scope 
-                = link_to '編集', "/posts/#{post.id}/edit", method: :get
-              %th.scope 
-                = link_to '削除', "/posts/#{post.id}", method: :delete
-
-
-  .pager
-    .page-btn
-      = paginate @posts
-
-
+  -# ------------------------------
+  -#           User
+  -# ------------------------------
 
 -else
-  .news-lists
-    .news-lists__pickup
-      %table.table
-        %thead
-          %tr
-            %th.scope 投稿日
-            %th.scope タイトル
-            %th.scope 詳細
-        %tbody
-          -@posts.each do |post|
-            %tr
-              %th.scope
-                = post.created_at.strftime('%Y/%m/%d %H:%M:%S')
-              %th.scope 
-                = post.name
-              %th.scope 
-                = link_to '詳細', "/posts/#{post.id}", method: :get
-           
+  .post
+    = render "posts/modules/news_list"
+  = render "posts/modules/news_info"
 
-
-  .pager
-    .page-btn
-      = paginate @posts
-  
+-# ------------------------------
+-#           Footer
+-# ------------------------------
 
 = render "products/modules/footer"
