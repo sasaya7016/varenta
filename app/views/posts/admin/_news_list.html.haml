@@ -7,8 +7,7 @@
           %tr
             %th.scope 投稿日
             %th.scope タイトル
-            %th.scope 詳細
-            %th.scope 編集
+            %th.scope 詳細/編集
             %th.scope 削除
 
         %tbody
@@ -19,9 +18,7 @@
               %th.scope 
                 = post.name
               %th.scope 
-                = link_to '詳細', "/posts/#{post.id}", method: :get
-              %th.scope 
-                = link_to '編集', "/posts/#{post.id}/edit", method: :get
+                = link_to '詳細/編集', "/posts/#{post.id}/edit", method: :get
               %th.scope 
                 = link_to '削除', "/posts/#{post.id}", method: :delete
 

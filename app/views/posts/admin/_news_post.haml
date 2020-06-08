@@ -1,27 +1,26 @@
 .news-wrapper
-  - @posts.first(1).reverse.each do |post|
-    .news-contents
-      .news-contents__pickup
-        .pickup__subject
-          %h2 投稿日：
-          %h2 
-            = post.created_at.strftime('%Y/%m/%d %H:%M:%S')
-          
-        .pickup__image
-          .pickup__image__first
-            = image_tag("main.logo2.jpg",class:"post-logo")
-            -# = post.image
-          .pickup__image__second
-            = image_tag("main.logo.jpg",class:"post-logo")
+  .news-contents
+    .news-contents__pickup
+      .pickup__subject
+        %h2 投稿日：
+        %h2 
+          = @post.created_at.strftime('%Y/%m/%d %H:%M:%S')
+        
+      .pickup__image
+        .pickup__image__first
+          = image_tag("main.logo2.jpg",class:"post-logo")
+          -# = post.image
+        .pickup__image__second
+          = image_tag("main.logo.jpg",class:"post-logo")
 
-        .pickup__text
-          .pickup__text__title
-            %h1 
-              = post.name
-          .pickup__text__main
-            %p
-              = simple_format post.text
-      .action-tab
+      .pickup__text
+        .pickup__text__title
+          %h1 
+            = @post.name
+        .pickup__text__main
+          %p
+            = simple_format @post.text
+    .action-tab
      
 
       
@@ -32,12 +31,8 @@
           - @posts.first(10).each do |post|
             %ul
               %li 
-                = link_to "#{post.name}", "/posts/#{post.id}", method: :get
+                = link_to "#{post.name}", "/posts/#{post.id}/edit", method: :get
               %br
 
-        = link_to '投稿', posts_path
-        = link_to '詳細', "/posts/#{post.id}", method: :get
-        = link_to '編集', "/posts/#{post.id}/edit", method: :get
-        = link_to '削除', "/posts/#{post.id}", method: :delete
   
 

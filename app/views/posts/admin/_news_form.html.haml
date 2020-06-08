@@ -1,5 +1,11 @@
 .post
   .post__main
+    - @posts.first(1).each do |post|
+      .link-btn
+        = link_to '投稿', posts_path
+        -# = link_to '詳細/編集', "/posts/#{post.id}/edit", method: :get
+        = link_to '削除', "/posts/#{post.id}", method: :delete
+    %h1 管理画面
     = form_with(model: @post, local: true, ) do |f|
       .post__main__image
         %p 画像
@@ -14,8 +20,8 @@
       .post__main__name
         %p 投稿文
         %p.required 必須
-        =f.text_area :text, class: "post-form", placeholder: "20字まで"
+        =f.text_area :text, class: "post-form post-area", placeholder: "20字まで"
 
       .post__btns
-        =f.submit class: "submit-btn btn", value: "投稿する"
+        =f.submit class: "submit-btn btn", value: "PUSH"
         =link_to "戻る", posts_path , class: "btn-back"

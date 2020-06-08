@@ -9,7 +9,7 @@
 -# ------------------------------
 
 -if user_signed_in? && current_user.admin
-  = render "posts/admin/news_post"
+  -# = render "posts/admin/news_post"
   = render "posts/admin/news_form"
   = render "posts/admin/news_list"
 
@@ -18,7 +18,8 @@
   -# ------------------------------
 
 -else
-  = render "posts/modules/news_list"
+  .post
+    = render "posts/modules/news_list"
   = render "posts/modules/news_info"
 
 -# ------------------------------
