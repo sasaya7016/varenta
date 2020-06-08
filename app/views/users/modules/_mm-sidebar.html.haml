@@ -1,19 +1,19 @@
 / sidebar start
 
-#sidebar.nav-collapse
-  / sidebar menu start
-  = link_to root_path do
-    %p.management-title Varenta
+-# #sidebar.nav-collapse
+-#   / sidebar menu start
+-#   = link_to root_path do
+-#     %p.management-title Varenta
 
-  %ul#nav-accordion.sidebar-menu
-    = link_to root_path ,class:"mm-title" do
-      = icon('fas', 'pen-square', class: 'icon')
-      管理画面
+-#   %ul#nav-accordion.sidebar-menu
+-#     = link_to root_path ,class:"mm-title" do
+-#       = icon('fas', 'pen-square', class: 'icon')
+-#       管理画面
 
-    %li.mt
-      = link_to new_post_path do
-        = icon('fas', 'pen-square', class: 'icon')
-        %span お知らせ投稿
+-#     %li.mt
+-#       = link_to new_post_path do
+-#         = icon('fas', 'pen-square', class: 'icon')
+-#         %span お知らせ投稿
     -# %li.sub-menu
     -#   = link_to root_path do
     -#     = icon('fas', 'pen-square', class: 'icon')
