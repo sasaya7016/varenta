@@ -1,0 +1,21 @@
+.post
+  .post__main
+    = form_with(model: @post, local: true, ) do |f|
+      .post__main__image
+        %p 画像
+        =f.text_field :image , class: "post-form"
+        
+
+      .post__main__name
+        %p タイトル名
+        %p.required 必須
+        =f.text_field :name, class: "post-form", placeholder: "20字まで"
+
+      .post__main__name
+        %p 投稿文
+        %p.required 必須
+        =f.text_area :text, class: "post-form", placeholder: "20字まで"
+
+      .post__btns
+        =f.submit class: "submit-btn btn", value: "投稿する"
+        =link_to "戻る", posts_path , class: "btn-back"
