@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   
   root "products#index"
   resources :products, only: [:new, :create]
-  get "products/news"
   get "products/price"
   get "products/hairstyle"
   get "products/staff"
