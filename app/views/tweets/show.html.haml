@@ -5,32 +5,45 @@
     %h1 投稿
     %p お店の商品や利用していただいた方へ
     %p ご要望・ご指摘がございましたら、ご記入ください。
+    .review-lists
+      .review-lists__list
+        .day-name
+          .date-time
+            = @tweet.created_at.strftime('%Y/%m/%d %H:%M')
+          .user-name
+            = @tweet.user.nickname
+          .select-list
+            = link_to '戻る', "/tweets/", method: :get
+            -if user_signed_in? && current_user.id == @tweet.user.id || current_user.admin
+              = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
+            -if user_signed_in? && current_user.admin
+              = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+
+        .text
+          = simple_format @tweet.text
+            
+  .review__view
+    コメント一覧
+    -@comments.each do |comment|
+      .comment-lists
+        .comment-lists__list
+          .day-name
+            .date-time
+              = comment.created_at
+            .user-name
+              = comment.user_id
+            .select-list
+              -if user_signed_in? && current_user.id == comment.user_id || current_user.admin
+                = link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete
+            
+        = comment.text
 
 
-    .review-list-show
-      .user-name
-        = @tweet.user.nickname
-      .text
-        = @tweet.text
-
-      %ul.select
-        %li.select-list
-          = link_to '戻る', "/tweets/", method: :get
-      
-          = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-          = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
-      
-  
-  .review-comments
-    - if current_user
+  .review__comments
+    -if user_signed_in? && current_user
       = form_with(model:[@tweet, @comment], local: true) do |f|
         = f.text_area :text, placeholder: "コメントする", rows: "2" 
         = f.submit "SEND"
-    -else
-      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
-    .comments
-      コメント一覧
-      -if @comments
-        -@comments.each do |comment|
-          = comment.text
+ 
