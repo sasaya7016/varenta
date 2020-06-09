@@ -1,0 +1,67 @@
+// .review
+// ▶︎@import "tweets/review_list";共通
+// ▶︎post/show.html.haml
+
+.review {
+  // ▶︎@import "tweets/review_list";共通
+  // width: 100%;
+  // min-width: 1300px;
+  // padding: 0 50px;
+  // margin-bottom: 5px;
+  // font-family: 'Roboto', sans-serif;
+  &__view {
+    width: 100%;
+    min-width: 1300px;
+    background-color: #ccc;
+    text-align: center;
+    .comment-lists {
+      width: 70%;
+      background-color: #fff;
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0 auto;
+      padding: 10px;
+      text-align: left;
+      &__list {
+        width: 100%;
+        margin: 5px auto;
+      
+        .day-name {
+          width: 100%;
+          background-color: #eee;
+          display: flex;
+          .date-time {
+            margin-right: 20px;
+          }
+          .user-name {
+            margin-right: 20px;
+          }
+        }
+        .text {
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  &__comments {
+    width: 100%;
+    min-width: 1300px;
+    background-color: #ccc;
+    text-align: center;
+    h1,p {
+      text-align: center;
+    }
+    textarea {
+      width: 70%;
+      height: 70px;
+      margin: 20px auto;
+    }
+    input {
+      width: 30%;
+      height: 50px;
+    }
+  }
+}
