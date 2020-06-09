@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create]
   
   get "posts/more"
+  namespace :posts do
+    resources :searches,only: [:index]
+  end
   resources :posts
 
 
