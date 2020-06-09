@@ -1,0 +1,11 @@
+.news-lists {
+  &__search {
+    padding: 0 50px;
+    .serch-post {
+      display: flex;
+    }
+    .posts_path {
+      margin-left: 10px;
+    }
+  }
+}
