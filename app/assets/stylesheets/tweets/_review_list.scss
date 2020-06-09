@@ -1,0 +1,64 @@
+.review {
+  width: 100%;
+  min-width: 1300px;
+  padding: 0 50px;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  &__tweets {
+    width: 100%;
+    min-width: 1300px;
+    background-color: #ccc;
+    h1,p {
+      text-align: center;
+    }
+
+    .review-lists {
+      width: 70%;
+      // height: 400px;
+      background-color: #aaa;
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0 auto;
+      padding: 2px 0;
+      &__list {
+        width: 99%;
+        height: 100px;
+        margin: 5px auto;
+        padding: 5px;
+        background-color: #fff;
+        text-align: left;
+        .day-name {
+          display: flex;
+          .date-time {
+            margin-right: 20px;
+          }
+          .user-name {
+            margin-right: 20px;
+          }
+        }
+        .text {
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+    
+
+    .review-form {
+      height: 200px;
+      form {
+        width: 100%;
+        text-align: center;
+      }
+      textarea {
+        width: 70%;
+        height: 70px;
+      }
+      input {
+        width: 70%;
+        height: 40px;
+      }
+    }
+  }
+}
