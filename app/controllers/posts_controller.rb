@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
 
   def index
@@ -34,6 +34,11 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to action: :index 
+  end
+
+  def search
+    @posts = Post.search(params[:keyword])
+  
   end
 
   private

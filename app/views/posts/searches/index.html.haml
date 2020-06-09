@@ -1,0 +1,77 @@
+-# ------------------------------
+-#           Header
+-# ------------------------------
+
+= render "products/modules/header"
+
+-# ------------------------------
+
+-if current_user 
+  .news-lists
+    .news-lists__search
+      .serch-post
+        = form_with(url: posts_searches_path, local: true, method: :get, class: "search-form") do |f|
+          = f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" 
+          = f.submit "検索", class: "search-btn"
+          = link_to "戻る",posts_path,class:"posts_path,"
+    
+      %table.table
+        %thead
+          %tr
+            %th.scope 投稿日
+            %th.scope タイトル
+            %th.scope 詳細/編集
+            %th.scope 削除
+
+        %tbody
+          -@posts.each do |post|
+            %tr
+              %th.scope
+                = post.created_at.strftime('%Y/%m/%d %H:%M:%S')
+              %th.scope 
+                = post.name
+              %th.scope 
+                = link_to '詳細/編集', "/posts/#{post.id}/edit", method: :get
+              %th.scope 
+                = link_to '削除', "/posts/#{post.id}", method: :delete
+    .pager
+      .page-btn
+        = paginate @pages
+
+- else
+  .news-lists
+    .news-lists__search
+      .serch-post
+        = form_with(url: posts_searches_path, local: true, method: :get, class: "search-form") do |f|
+          = f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" 
+          = f.submit "検索", class: "search-btn"
+          = link_to "戻る",posts_path,class:"posts_path,"
+    
+      %table.table
+        %thead
+          %tr
+            %th.scope 投稿日
+            %th.scope タイトル
+            %th.scope 詳細
+        %tbody
+          -@posts.each do |post|
+            %tr
+              %th.scope
+                = post.created_at.strftime('%Y/%m/%d %H:%M:%S')
+              %th.scope 
+                = post.name
+              %th.scope 
+                = link_to '詳細', "/posts/#{post.id}", method: :get
+            
+
+    .pager
+      .page-btn
+        = paginate @pages
+  
+
+
+-# ------------------------------
+-#           Footer
+-# ------------------------------
+
+= render "products/modules/footer"
