@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @posts = Post.all
+    # news
+    @posts = Post.includes(:user)
     @posts = Post.page(params[:page]).per(3).order('updated_at DESC')
   end
 
