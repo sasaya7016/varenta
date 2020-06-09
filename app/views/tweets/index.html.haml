@@ -14,12 +14,16 @@
             .user-name
               = tweet.user.nickname
             .select-list
-              = link_to '詳細', "/tweets/#{tweet.id}", method: :get
-              -if user_signed_in? && current_user.id == tweet.user.id || current_user.admin
+              -if user_signed_in? && current_user.id == tweet.user.id
+                = link_to '詳細', "/tweets/#{tweet.id}", method: :get
                 = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-
+              - else
+                = link_to '詳細', "/tweets/#{tweet.id}", method: :get
           .text
             = simple_format tweet.text
+            -if user_signed_in? && current_user.admin
+              %button
+                = link_to 'Master/Delete', "/tweets/#{tweet.id}", method: :delete
 
 
       = paginate(@tweets)

@@ -13,14 +13,20 @@
           .user-name
             = @tweet.user.nickname
           .select-list
-            = link_to '戻る', "/tweets/", method: :get
-            -if user_signed_in? && current_user.id == @tweet.user.id || current_user.admin
+            -if user_signed_in? && current_user.id == @tweet.user.id
+              -# = link_to '詳細', "/tweets/#{@tweet.id}", method: :get
               = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-            -if user_signed_in? && current_user.admin
-              = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+              = link_to '戻る', tweets_path
+            - else
+              -# = link_to '詳細', "/tweets/#{@tweet.id}", method: :get
+              = link_to '戻る', tweets_path
+     
 
         .text
           = simple_format @tweet.text
+          -if user_signed_in? && current_user.admin
+            master
+            = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
             
   .review__view
     コメント一覧
@@ -33,7 +39,7 @@
             .user-name
               = comment.user_id
             .select-list
-              -if user_signed_in? && current_user.id == comment.user_id || current_user.admin
+              -if user_signed_in? && current_user.id == comment.user_id 
                 = link_to '削除', "/tweets/#{@tweet.id}/comments/#{comment.id}", method: :delete
             
         = comment.text
@@ -44,6 +50,11 @@
       = form_with(model:[@tweet, @comment], local: true) do |f|
         = f.text_area :text, placeholder: "コメントする", rows: "2" 
         = f.submit "SEND"
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        
+    -else
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+=render "products/modules/footer"
+      
 
  
