@@ -24,10 +24,16 @@
   .top-header__nav
     %ul.nav-lists
       %li.nav-list
-        = link_to posts_path class:"nav-list__point" do
-          お知らせ
-          %br
-          %span news
+        -if @post.nil?
+          = link_to root_path class:"nav-list__point" do
+            お知らせ
+            %br
+            %span news
+        -else
+          = link_to posts_path class:"nav-list__point" do
+            お知らせ
+            %br
+            %span news
       %li.nav-list
         = link_to products_price_path class:"nav-list__point" do
           メニュー
@@ -55,8 +61,16 @@
           %span contact
 
       %li.nav-list
-        = link_to tweets_path class:"nav-list__point" do
-          口コミ
-          %br
-          %span Review
+        -if @post.nil?
+          = link_to root_path class:"nav-list__point" do
+            口コミ
+            %br
+            %span Review
+
+        -else
+          = link_to tweets_path class:"nav-list__point" do
+            口コミ
+            %br
+            %span Review
+          
     
