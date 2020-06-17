@@ -61,23 +61,11 @@ ActiveRecord::Schema.define(version: 2020_06_07_042513) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "introduction", null: false
-    t.integer "price", null: false
-    t.string "brand"
-    t.integer "category_id", null: false
-    t.string "item_size"
-    t.string "status", null: false
-    t.integer "favorites_count"
-    t.integer "preparation_day", null: false
-    t.integer "exhibitor_id"
-    t.integer "purchaser_id"
-    t.integer "purchaser_id_status"
-    t.string "delivery_fee", null: false
-    t.integer "prefecture_id", null: false
+    t.string "name"
+    t.text "introduction"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name", "brand"], name: "index_products_on_name_and_brand"
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
