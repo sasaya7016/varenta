@@ -52,7 +52,4 @@ production:
   database: varenta_production
   username: varenta
   password: <%= ENV['VARENTA_DATABASE_PASSWORD'] %>
-  # ---heroku---
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+
