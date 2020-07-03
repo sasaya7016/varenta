@@ -62,9 +62,15 @@
           %span contact
 
       %li.nav-list
-        = link_to tweets_path class:"nav-list__point" do
-          口コミ
-          %br
-          %span Review
+        - if user_signed_in?
+          = link_to tweets_path class:"nav-list__point" do
+            口コミ
+            %br
+            %span Review
+        - else
+          = link_to root_path class:"nav-list__point" do
+            口コミ
+            %br
+            %span Review
           
     
