@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :products
-  has_one :address
   has_many :tweets
   has_many :comments
   
@@ -13,7 +12,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
 
   :recoverable, :rememberable, :validatable, password_length: 7..100
-
-  validates :lastname, :firstname, :firstnameKANA, :lastnameKANA, :nickname, :birth_date, presence: true
 
 end

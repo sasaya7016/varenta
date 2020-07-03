@@ -14,7 +14,8 @@
         =  link_to "ログイン", new_user_session_path
     %button.mypage-btn
       - if user_signed_in?
-        -# = link_to "マイページ", user_path(current_user.id)
+        = link_to "マイページ(工事中)",root_path
+        -# , user_path(current_user.id)
       - else
         %h4
         = link_to "新規登録会員",new_user_registration_path
