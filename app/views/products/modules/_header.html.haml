@@ -61,16 +61,9 @@
           %span contact
 
       %li.nav-list
-        -if @post.nil?
-          = link_to root_path class:"nav-list__point" do
-            口コミ
-            %br
-            %span Review
-
-        -else
-          = link_to tweets_path class:"nav-list__point" do
-            口コミ
-            %br
-            %span Review
+        = link_to tweets_path class:"nav-list__point" do
+          口コミ
+          %br
+          %span Review
           
     
